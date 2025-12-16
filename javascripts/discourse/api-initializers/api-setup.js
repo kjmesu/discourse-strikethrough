@@ -30,7 +30,7 @@ export default apiInitializer("0.11.1", (api) => {
         group: "fontStyles",
         icon: "strikethrough",
         title: "strikethrough_button_title",
-        perform: (e) => e.applySurround("<s>", "</s>", "strikethrough_text"),
+        perform: (e) => e.applySurround("~~", "~~", "strikethrough_text"),
       },
     ];
 
