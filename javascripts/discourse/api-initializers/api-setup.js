@@ -37,10 +37,11 @@ export default apiInitializer("0.11.1", (api) => {
     buttons.forEach((button) => toolbar.addButton(button));
   });
 
-  // Decorate cooked elements with highlight processing
   api.decorateCookedElement(
     async (elem, helper) => {
-      const id = helper ? `post_${helper.getModel().id}` : "composer";
+      const id = helper?.getModel()?.id
+        ? `post_${helper.getModel().id}`
+        : "composer";
       applyHighlight(elem, id);
     },
     { id: "wrap-mark" }
